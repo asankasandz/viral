@@ -1,12 +1,5 @@
 .header {
-    .headerWrap {
-        display: flex;
-        justify-content: space-between;
-        .nav {
-            ul {
-                display: flex;
-                gap: 45px;
-            }
-        }
+    .headerNavlink{
+        font-size: 14px;
     }
 }
