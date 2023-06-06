@@ -31,3 +31,12 @@ body {
 .primary-color{
   color: #EE6325 !important;
 }
+
+
+.accordion-header button::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M11 11V5H13V11H19V13H13V19H11V13H5V11H11Z' fill='rgba(33,231,134,1)'%3E%3C/path%3E%3C/svg%3E");
+}
+.accordion-header button:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M5 11V13H19V11H5Z' fill='rgba(33,231,134,1)'%3E%3C/path%3E%3C/svg%3E");
+}
+

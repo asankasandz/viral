@@ -108,4 +108,38 @@
         padding-bottom: 30px;
         padding-top: 60px;
     }
+    .faqAccordion {
+        .accordionWrap {
+            --bs-accordion-border-color:unset;
+            --bs-accordion-inner-border-radius: unset;
+            .accordionHeader {
+                button {
+                    background-color: #141B22;
+                    color: #fff;
+                    box-shadow: none;
+                   font-weight: 700;
+                   padding-top: 22px;
+                   padding-bottom: 22px;
+                }
+            }
+            .accordionBody {
+                position: relative;
+                background-color: #141B22;
+                color: #fff;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    background-color: #434343;
+                    height: 1px;
+                    width: 98%;
+                    margin: 0 auto;
+                }
+            }
+        }
+
+    }
+   
 }
