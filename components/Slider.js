@@ -8,18 +8,28 @@ let productsp = [
     {
         id: 1,
         name: "Product Number 1",
-        brand: "Brand Name",
-        url: "products-number-1",
-        price: 100,
+        brandname: "Brand",
+        brandlogourl: "/slider/Nike-Logo.png",
+        brandtexthead: "Text",
+        brandtextbody: "Generated through a natural language processing tool driven by AI technology",
+        brandimgname: "Image",
+        brandimgbody: "Generated through AI based Text to image technology",
+        brandfinal: "Final",
+        brandfinalbody: "The final is combined together and exported into a final element using an editing tool",
         imgurl: "/slider/slider-img.png",
     },
 
     {
-        id: 1,
-        name: "Product Number 2",
-        brand: "Brand Name",
-        url: "products-number-2",
-        price: 100,
+        id: 2,
+        name: "Product Number 1",
+        brandname: "Brand",
+        brandlogourl: "/slider/Nike-Logo.png",
+        brandtexthead: "Text",
+        brandtextbody: "Generated through a natural language processing tool driven by AI technology",
+        brandimgname: "Image",
+        brandimgbody: "Generated through AI based Text to image technology",
+        brandfinal: "Final",
+        brandfinalbody: "The final is combined together and exported into a final element using an editing tool",
         imgurl: "/slider/slider-img.png",
     },
 ];
@@ -74,14 +84,14 @@ const Slider = () => {
                 className="bg-black"
                 id="owl-carousel-products"
             >
-                <h3 className={`${styles.carouselHeaderWrap} text-center`}>
-                    <span className={`${styles.carouselHeader}`} >Featured Products</span>
+                <h3 className={`${styles.carouselHeaderWrap} text-center pt-5`}>
+                    <span className={`${styles.carouselHeader}`} >Creatives for your brand</span>
                 </h3>
-                <p className={`${styles.carouselTextWrap} text-center `}>
+                <p className={`${styles.carouselTextWrap} text-center pb-5 `}>
                     <span className={`${styles.carouselText}`} >Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occae cat cupidatat non proident, sunt in culpa qui officia dese runt </span>
                 </p>
                 <div className={`${styles.carouselSliderWrap} `}>                    
-                    <ul id="owl-carousel-ul" className="owl-carousel owl-loaded owl-drag">
+                    <ul id="owl-carousel-ul" className={`${styles.carouselSliderUl} owl-carousel owl-loaded owl-drag pl-2`} >
                     <OwlCarousel
                         className="owl-theme"
                         loop
@@ -99,31 +109,37 @@ const Slider = () => {
                             ? productsp.map((product) => {
                                 return (
                                     <div
-                                        id="featuredProducts"
-                                        className="item float-left w-100"
+                                        id="featuredProducts"  className={`${styles.carouselSlider} item float-left w-100`}
                                         key={product.name}
                                     >
-                                        <div className="productListing row">
-                                        <div className="col-3">
-                                            <div className="cardWrap">
-                                                <div className="cardHeader">
-                                                    <h5>Brand</h5>
+                                        <div className={`${styles.productListing} productListing row`}>
+                                        <div className="col-3 d-flex flex-column justify-content-center ">
+                                            <div className="d-none d-lg-block">
+                                                <div className={`${styles.cardWrap} d-flex flex-column align-items-center justify-content-center mb-3`}>
+                                                    <div className={`${styles.cardHeader}`}>
+                                                        <h5>{product.brandname}</h5>
+                                                    </div>
+                                                    <div className={`${styles.cardBody}`}>
+                                                        <img
+                                                            src={product.brandlogourl}
+                                                            alt={product.name}
+                                                            title={product.name}
+                                                        />
+                                                    </div>
                                                 </div>
-                                                <div className="cardBody">
-                                                    <p>nike</p>
-                                                </div>
-                                            </div>
-                                            <div className="cardWrap">
-                                                <div className="cardHeader">
-                                                    <h5>Brand</h5>
-                                                </div>
-                                                <div className="cardBody">
-                                                    <p>nike</p>
+                                                <div className={`${styles.cardWrap} d-flex flex-column align-items-center justify-content-center mb-3 text-center p-4`}>
+                                                    <div className={`${styles.cardHeader}`}>
+                                                        <h5>{product.brandtexthead}</h5>
+                                                    </div>
+                                                    <div className={`${styles.cardBody} `}>
+                                                        <p>{product.brandtextbody}</p>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="col-6">
+                                        <div className="col-12 col-md-12 col-lg-6">
                                             <a href={product.url}>
+
                                                     <a className="product float-left">
                                                         <span className="image text-center">
                                                             <img
@@ -133,7 +149,7 @@ const Slider = () => {
                                                                 title={product.name}
                                                             />
                                                         </span>
-                                                        <span className="w-100 text-center mt-1 ">
+                                                        {/* <span className="w-100 text-center mt-1 ">
                                                             <h5 className="brand text-capitalize float-left">
                                                                 {product.brand}
                                                             </h5>
@@ -141,12 +157,32 @@ const Slider = () => {
                                                             <strong className="itemPrice p-0">
                                                                 Price: {product.price}
                                                             </strong>
-                                                        </span>
+                                                        </span> */}
                                                     </a>
+
+
                                             </a>
                                         </div>
-                                        <div className="col-3">
-                                            One of three columns
+                                        <div className=" col-lg-3 d-flex flex-column  justify-content-center    ">
+                                            <div className="d-none d-lg-block">
+                                                <div className={`${styles.cardWrap} d-flex flex-column align-items-center justify-content-center text-center p-4 mb-3`}>
+                                                    <div className={`${styles.cardHeader}`}>
+                                                        <h5>{product.brandimgname}</h5>
+                                                    </div>
+                                                    <div className={`${styles.cardBody}`}>
+                                                        <p>{product.brandimgbody}</p>
+                                                    </div>
+                                                </div>
+                                                <div className={`${styles.cardWrap} d-flex flex-column align-items-center justify-content-center text-center p-4 mb-3`}>
+                                                    <div className={`${styles.cardHeader}`}>
+                                                        <h5>{product.brandfinal}</h5>
+                                                    </div>
+                                                    <div className={`${styles.cardBody} `}>
+                                                        <p>{product.brandfinalbody}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                           
                                         </div>
                                             
                                         </div>

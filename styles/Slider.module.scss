@@ -4,4 +4,25 @@
             color: #fff;
         }
     }
+    .carouselTextWrap {
+        width: 60%;
+        margin: 0 auto;
+        .carouselText {
+            color: #fff;
+        }
+    }
+    .carouselSliderWrap {
+        .carouselSliderUl {
+            padding-left: 0rem;
+            .carouselSlider {
+                .productListing {
+                    .cardWrap {
+                        background-color: #D9D9D9;
+                        min-height: 200px;
+                    }
+                }
+            }
+        }
+        
+    }
 }

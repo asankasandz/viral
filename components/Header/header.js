@@ -1,53 +1,25 @@
 import React from 'react';
 import styles from '@/components/Header/Header.module.scss'
 import Image from 'next/image';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 
 const Header = () => (
   <header className={styles.header}>
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div className="container">
-        <a className="navbar-brand" href="/">
-          <Image className='img-fluid' src="/home/vairal-logo.png" width={142} height={26}/>
-        </a>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
-            <li className="nav-item">
-              <a className={`${styles.headerNavlink} nav-link active text-uppercase`} aria-current="page" href="#">
-              SERVICES
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className={`${styles.headerNavlink} nav-link text-uppercase`} href="#">
-              SUBSCRIPTIONS
-              </a>
-            </li>
-            <li  className="nav-item">
-              <a className={`${styles.headerNavlink} nav-link text-uppercase`} href="#">
-              ABOUT US
-              </a>
-            </li>
-            <li  className="nav-item">
-              <a className={`${styles.headerNavlink} nav-link text-uppercase`} href="#">
-              CONTACT US
-              </a>
-            </li>
-            <li  className="nav-item">
-              <a className={`${styles.headerNavlink} nav-link text-uppercase`} href="#">
-              BLOGS
-              </a>
-            </li>
-          </ul>
+    <Navbar bg="dark" expand="lg" navbar="dark" >
+      <Container>
+        <Navbar.Brand  href="/"><Image className='img-fluid' src="/home/vairal-logo.png" width={142} height={26}/></Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" className="bg-white text-white" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto mx-auto mb-2 mb-lg-0">
+            <Nav.Link href="#" className="active text-uppercase text-white mt-3 mt-md-3 mt-lg-0">SERVICES</Nav.Link>
+            <Nav.Link href="#" className="active text-uppercase text-white">SUBSCRIPTIONS</Nav.Link>
+            <Nav.Link href="#" className="active text-uppercase text-white">ABOUT US</Nav.Link>
+            <Nav.Link href="#" className="active text-uppercase text-white">CONTACT US</Nav.Link>
+            <Nav.Link href="#" className="active text-uppercase text-white">BLOGS</Nav.Link>          
+          </Nav>
           <div className="d-flex">
             <button className="btn btn-outline-primary me-2 fw-bold fs-6" type="button">
               SIGIN IN
@@ -56,9 +28,9 @@ const Header = () => (
               JOIN
             </button>
           </div>
-        </div>
-      </div>
-    </nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   </header>
 );
 

@@ -135,8 +135,8 @@ export default function Home() {
                     </span>
                     <span className="primary-color"> HUMANIZED AI.GENCy</span>
                   </h1>
-                  <div className="sub-content">
-                    <p className="text-white">Generate conversion focused ad creatives and social media post creatives in a matter of
+                  <div className="sub-content ">
+                    <p className="text-white pb-3 pb-md-3 pb-lg-0">Generate conversion focused ad creatives and social media post creatives in a matter of
                       seconds using Artificial Intelligence. Get better results while saving time.</p>
                     <div className="btn-wrapper">
                       <button className="btn btn-primary me-2 fw-bold fs-6 text-uppercase" type="button">
@@ -149,10 +149,10 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="col-12 col-md-6 col-lg-6">
-                <div className="img-wrapper h-100 d-flex align-items-end">
-                  <img className={`${styles.heroSideImage} img-fluid h-100`} src="/home/hero-side.webp" />
-                </div>
+              <div className="col-12 col-md-6 col-lg-6 ">
+                  <div className="img-wrapper h-100 d-flex align-items-end">
+                    <img className={`${styles.heroSideImage} img-fluid h-100`} src="/home/hero-side.webp" />
+                  </div>
               </div>
             </div>
           </div>

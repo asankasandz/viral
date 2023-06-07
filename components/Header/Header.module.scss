@@ -1,5 +1,7 @@
 .header {
-    .headerNavlink{
-        font-size: 14px;
+    .headerNavlink {
+        &.active {
+            color: aliceblue;
+        }
     }
 }
